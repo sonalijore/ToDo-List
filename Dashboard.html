@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Todo|Dashboard</title>
+    </head>
+    <body>
+        <h2>TODO Information</h2>
+        <a href="/create">Create Entry</a><br>
+         <table border='|' align='center'>
+            <tr>
+                <th>Task_Name</th>
+                <th>Task_Description</th>
+                <th>Task_Time</th>
+                <th>Task_Priority</th>
+                <th>EDIT</th>
+                <th>DELET</th>
+            </tr>
+            {% for x in d %}
+                <tr>
+                    <td>{{x.1}}</td>
+                    <td>{{x.2}}</td>
+                    <td>{{x.3}}</td>
+                    <td>{{x.4}}</td>
+                   
+                    
+                    <td><a href='edit/{{x.0}}'>Edit</a> </td>
+                    <td><a href='delete/{{x.0}}'>Delete</a></td>
+                </tr>
+            {% endfor %}
+        
+        </table>
+    </body>
+
+</html>
